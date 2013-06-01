@@ -1,0 +1,6 @@
+.buildpath
+.project
+.settings/
+.DS_Store
+vendor
+clone

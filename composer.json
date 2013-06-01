@@ -1,0 +1,24 @@
+{
+    "name": "sunshinephp/ssp-sponsors",
+    "description": "Sponsors module for use in the SunshinePHP site.",
+    "type": "library",
+    "keywords": ["ssphp","ssp"],
+    "authors": [
+    	{
+    		"name": "Adam Culp",
+    		"email": "adamculp@uws.net",
+    		"homepage": "http://geekyboy.com"
+    	}
+    ],
+    "require": {
+    	"php": ">=5.3.3"
+    },
+    "autoload": {
+        "psr-0": {
+            "SspSponsors": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    }
+}
