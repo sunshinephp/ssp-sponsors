@@ -1,7 +1,67 @@
-<strong>Module:</strong>        SspSponsors &raquo;
-<strong>Controller:</strong>    Sponsors &raquo;
-<strong>Action:</strong>        index
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            <div class="row">
+                <div class="span12">
+                    <section id="block-download">
+                        <ul class="breadcrumb">
+                            <li><a href="#">Home</a> <span class="divider">/</span></li>
+                            <li class="active">SunshinePHP Conference</li>
+                        </ul>
+                        <div class="page-header">
+                            <h1>Our Sponsors</h1>
+                        </div>
+                        <div id="block-mine">
+                            <p>SunshinePHP is made possible by the generous contributions
+                                of sponsors. Without their help we wouldn’t have a
+                                conference.  This conference is driven by developers for
+                                developers and their companies.  We always strive to keep
+                                the entrance fee as low as possible and make the best
+                                experience possible for our visitors.  In order to accomplish
+                                that we heavily rely on the financial support of our
+                                awesome sponsors.</p>
+                            <p>&nbsp;</p>
 
-<?php
+                            <?php
+                            $i = 1;
 
-echo 'deeper sponsors-view-index-test';
+                            if ($sponsors) {
+
+                                foreach ($sponsors as $sponsor):
+
+                                    if ($level != $sponsor['level']) {
+                                        echo '<br /><br />';
+
+                                        $i = 0;
+                                    }
+
+                                    if ($i == 3) {
+
+                                        echo '<br /><br />';
+
+                                        $i = 0;
+                                    }
+                                    ?>
+
+                                    <a href="<?= $sponsor['link']; ?>" title="<?= $sponsor['title']; ?>" target="_blank">
+                                        <img src="/img/sponsor_badges/<?= $sponsor['image']; ?>" alt="<?= $sponsor['title']; ?>" />
+                                    </a>
+
+                                    <?php
+                                    $level = $sponsor['level'];
+
+                                    $i++;
+
+                                endforeach; ?>
+
+                            <?php } ?>
+
+                        </div>
+
+                    </section>
+                </div>
+                <?php //echo $this->sidebar(); ?>
+            </div>
+        </div>
+    </div>
+</div>

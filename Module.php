@@ -9,6 +9,7 @@
 
 namespace SspSponsors;
 
+use SspSponsors\Model\SponsorsTable;
 use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 use Zend\Mvc\ModuleRouteListener;
 //use Zend\Mvc\MvcEvent;
@@ -23,7 +24,7 @@ class Module implements AutoloaderProviderInterface
             ),
             'Zend\Loader\StandardAutoloader' => array(
                 'namespaces' => array(
-		    // if we're in a namespace deeper than one level we need to fix the \ in the path
+                    // if we're in a namespace deeper than one level we need to fix the \ in the path
                     __NAMESPACE__ => __DIR__ . '/src/' . str_replace('\\', '/' , __NAMESPACE__),
                 ),
             ),
@@ -33,5 +34,18 @@ class Module implements AutoloaderProviderInterface
     public function getConfig()
     {
         return include __DIR__ . '/config/module.config.php';
+    }
+
+    public function getServiceConfig()
+    {
+        return array(
+            'factories' => array(
+                'SponsorsTable' => function($sm) {
+                    $db = $sm->get('Zend\Db\Adapter\Adapter');
+                    $table = new SponsorsTable($db);
+                    return $table;
+                },
+            ),
+        );
     }
 }
