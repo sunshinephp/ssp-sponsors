@@ -3,14 +3,14 @@
 </div>
 <div id="block-mine">
     <p>SunshinePHP is made possible by the generous contributions
-        of sponsors and without their help we would not have a
+        of sponsors and without their help we wouldn't have a
         conference.  This conference is driven by developers for
         developers and their companies so we strive to keep
         the entrance fee as low as possible and make the best
         experience possible for attendees.  In order to accomplish
         that we heavily rely on the financial support of
         awesome sponsors.</p>
-    <p>To become a sponsor please request a 2014 sponsor prospectus
+    <p>To become a sponsor please request a sponsor prospectus
         by using our <a href="/contact" title="Contact form">contact form</a>.</p>
 
     <?php
@@ -18,19 +18,14 @@
     $level = '';
 
     if ($sponsors) {
-
         foreach ($sponsors as $sponsor):
-
-            if ($level != $sponsor['level']) {
+            if ($sponsor['level'] != $level) {
                 echo '<br /><br />';
-
                 $i = 0;
             }
 
             if ($i == 3) {
-
                 echo '<br /><br />';
-
                 $i = 0;
             }
             ?>
@@ -41,7 +36,6 @@
 
             <?php
             $level = $sponsor['level'];
-
             $i++;
 
         endforeach; ?>

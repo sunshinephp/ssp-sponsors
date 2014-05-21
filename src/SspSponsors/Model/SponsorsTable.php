@@ -6,6 +6,11 @@ use Zend\Db\Adapter\Adapter;
 use Zend\Db\TableGateway\TableGateway;
 use Zend\Db\Sql\Select;
 
+/**
+ * Simple model acting with TableGateway for basic querying.
+ *
+ * @package SspSponsors\Model
+ */
 class SponsorsTable
 {
     protected $tableGateway;
