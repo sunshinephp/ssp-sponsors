@@ -16,9 +16,4 @@ class SponsorsController extends AbstractActionController
 
         return new ViewModel(array('sponsors' => $sponsors));
     }
-
-    public function fooAction()
-    {
-        return array();
-    }
 }
