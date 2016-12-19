@@ -12,10 +12,13 @@
 
     <?php
     $i = 1;
-    $level = '';
+    $level = false;
 
     if ($sponsors) {
         foreach ($sponsors as $sponsor):
+            // if this is the first loop we need to prime $level
+            (!$level ? $level = $sponsor['level'] : false);
+            
             if ($sponsor['level'] != $level) {
                 echo '<br /><br />';
                 $i = 0;
