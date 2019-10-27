@@ -12,7 +12,6 @@ namespace SspSponsors;
 use SspSponsors\Model\SponsorsTable;
 use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 use Zend\Mvc\ModuleRouteListener;
-//use Zend\Mvc\MvcEvent;
 
 class Module implements AutoloaderProviderInterface
 {
