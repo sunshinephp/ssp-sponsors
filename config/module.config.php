@@ -5,6 +5,11 @@ return array(
             'sspsponsors-sponsors-controller' => 'SspSponsors\Controller\SponsorsController',
         ),
     ),
+    'service_manager' => array(
+        'factories' => array(
+            'Zend\Db\Adapter\Adapter' => 'Zend\Db\Adapter\AdapterServiceFactory'
+        ),
+    ),
     'view_helpers' => array(
         'invokables' => array(
             'sidebar' => 'Application\View\Helper\Sidebar',
@@ -52,11 +57,6 @@ return array(
     'view_manager' => array(
         'template_path_stack' => array(
             'SspSponsors' => __DIR__ . '/../view',
-        ),
-    ),
-    'service_manager' => array(
-        'factories' => array(
-            'Zend\Db\Adapter\Adapter' => 'Zend\Db\Adapter\AdapterServiceFactory'
         ),
     ),
 );
