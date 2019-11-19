@@ -9,6 +9,6 @@ class SponsorsControllerFactory
 {
     public function __invoke(ContainerInterface $container)
     {
-        return new SponsorsController($container->get('SponsorTable'));
+        return new SponsorsController($container->get('SponsorsTable'));
     }
 }
