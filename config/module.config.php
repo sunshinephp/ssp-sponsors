@@ -1,8 +1,8 @@
 <?php
 return array(
     'controllers' => array(
-        'invokables' => array(
-            'sspsponsors-sponsors-controller' => 'SspSponsors\Controller\SponsorsController',
+        'factories' => array(
+            'sspsponsors-sponsors-controller' => SspSponsors\Factory\SponsorsControllerFactory::class,
         ),
     ),
     'service_manager' => array(
@@ -10,11 +10,11 @@ return array(
             'Zend\Db\Adapter\Adapter' => 'Zend\Db\Adapter\AdapterServiceFactory'
         ),
     ),
-    'view_helpers' => array(
-        'invokables' => array(
-            'sidebar' => 'Application\View\Helper\Sidebar',
-        ),
-    ),
+//    'view_helpers' => array(
+//        'invokables' => array(
+//            'sidebar' => 'Application\View\Helper\Sidebar',
+//        ),
+//    ),
     'router' => array(
         'routes' => array(
             'sponsors-index' => array(
