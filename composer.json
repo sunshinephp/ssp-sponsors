@@ -2,6 +2,7 @@
     "name": "sunshinephp/ssp-sponsors",
     "description": "Sponsors module for use in the SunshinePHP site.",
     "type": "library",
+    "license": "BSD-3-Clause",
     "keywords": ["ssphp","ssp"],
     "authors": [
     	{
