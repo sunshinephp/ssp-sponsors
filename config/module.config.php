@@ -10,11 +10,6 @@ return array(
             'Zend\Db\Adapter\Adapter' => 'Zend\Db\Adapter\AdapterServiceFactory'
         ),
     ),
-//    'view_helpers' => array(
-//        'invokables' => array(
-//            'sidebar' => 'Application\View\Helper\Sidebar',
-//        ),
-//    ),
     'router' => array(
         'routes' => array(
             'sponsors-index' => array(
